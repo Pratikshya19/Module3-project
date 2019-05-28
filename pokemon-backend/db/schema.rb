@@ -16,11 +16,13 @@ ActiveRecord::Schema.define(version: 2019_05_28_155915) do
     t.string "name"
     t.string "type"
     t.string "description"
+    t.integer "trainer_id"
   end
 
   create_table "trainers", force: :cascade do |t|
     t.string "name"
     t.integer "age"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
